@@ -1,3 +1,6 @@
+CREATE DATABASE PWEB2_ATV2;
+USE PWEB2_ATV2;
+
 CREATE TABLE usuario(
     id integer primary key auto_increment,
     nome varchar(100),

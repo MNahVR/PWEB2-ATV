@@ -68,7 +68,7 @@
                     <button class="bt" onclick="return validar()">Enviar</button>
                     <div class="vocative">
                         <span>Já tem cadastro</span>
-                        <a href=>Logue-se</a>
+                        <a href="login.php">Logue-se</a>
                     </div>    
                 </fieldset>
             </form>

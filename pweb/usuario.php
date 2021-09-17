@@ -19,7 +19,7 @@ class usuario{
     public function salvarBD(){
         try {
             $this->hashsenha();
-			$nome = $this->Nome();
+			$nome = $this->getNome();
             $nomeu = $this->getNomeu();
 			$email =  $this->getEmail();
             $senha = $this->getSenha();
@@ -41,7 +41,7 @@ class usuario{
     }
 
     public static function pesquisa(String $queryString){
-        $stmt =  Connection::getConnection()->prepare('SELECT * FROM usuario WHERE email LIKE :query_string or nomeu LIKE :query_string or nome LIKE :query_string');
+        $stmt =  Connection::getConexao()->prepare('SELECT * FROM usuario WHERE email LIKE :query_string or nomeu LIKE :query_string or nome LIKE :query_string');
         $queryString = '%' . $queryString . '%';
         $stmt->bindParam(":query_string", $queryString);
         $fetchAll = $stmt->execute();
