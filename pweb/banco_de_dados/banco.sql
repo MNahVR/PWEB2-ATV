@@ -3,5 +3,5 @@ CREATE TABLE usuario(
     nome varchar(100),
     nomeu varchar(100) unique,
     email varchar(50) unique,
-    senha varchar(50)
+    senha varchar(30)
 )

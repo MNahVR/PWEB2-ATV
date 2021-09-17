@@ -4,6 +4,7 @@ class conexao{
         $database = "PWEB2-ATV";
         $username = "root";
         $senha = "";
+        
         return new PDO("mysql:host=localhost;dbname=$database", $username, $senha);
     }
 

@@ -9,16 +9,14 @@ class usuario{
     private String $email;
     private String $senha;
 
-    function __construct(String $nome, String $nomeu, String $email, String $senha)
-    {
+    function __construct(String $nome, String $nomeu, String $email, String $senha){
         $this->nome = $nome;
         $this->nomeu = $nomeu;
         $this->email = $email;
         $this->senha = $senha;
     }
 
-    public function salvarBD()
-    {
+    public function salvarBD(){
         try {
             $this->hashsenha();
 			$nome = $this->Nome();
@@ -52,8 +50,7 @@ class usuario{
         return $usuario;
     }
 
-    public static function listUsuario()
-    {
+    public static function listUsuario(){
         try {
             $query = conexao::getConexao()->query('SELECT * FROM usuario');
             $list = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -73,8 +70,7 @@ class usuario{
         }, $list);
     }
 
-    public static function login(String $email, String $senha)
-    {
+    public static function login(String $email, String $senha){
         try {
             $stmt = conexao::getConexao()->prepare('SELECT * FROM usuario WHERE email = :email');
             $stmt->bindParam(":email", $email);

@@ -1,4 +1,5 @@
 <?php
+
 require_once "pweb/usuario.php";
 $user = $_SESSION["loggedUser"];
 if(isset($_GET["pesquisa"])){

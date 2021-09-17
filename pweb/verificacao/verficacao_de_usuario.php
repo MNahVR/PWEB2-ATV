@@ -3,8 +3,7 @@
 require_once "pweb/usuario.php";
 
 class verificacao_de_usuario{
-    public function cadastrar()
-    {
+    public function cadastrar(){
         $nome = $_POST["nome"];
         $nomeu = $_POST["nomeu"];
         $email = $_POST["email"];
@@ -22,8 +21,7 @@ class verificacao_de_usuario{
         }
     }
 
-    public function login()
-    {
+    public function login(){
         $email = $_POST["email"];
         $senha = $_POST["senha"];
         if (!isset($email) || !isset($senha)) {
@@ -39,8 +37,7 @@ class verificacao_de_usuario{
         }
     }
 
-    public function sair()
-    {
+    public function sair(){
         session_destroy();
         header("Location: ?view=login");
     }
